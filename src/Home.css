@@ -1,0 +1,12 @@
+.home_app{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.home_app img{
+    width: 50vw;
+    height: auto;
+}

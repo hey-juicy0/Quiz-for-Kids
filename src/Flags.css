@@ -1,0 +1,31 @@
+.flags_app{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+.flags_app img{
+    height: 50vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 5vh 0;
+}
+.flags_container{
+    display: flex;
+    gap: 5vw;
+    flex: 1;
+}
+.flags_container button:hover{
+    background-color: #57cca5;
+    font-weight: 700;
+}
+.flags_container button{
+    border: none;
+    flex: 1;
+    white-space: nowrap;
+    padding: 1vh 2vw;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
