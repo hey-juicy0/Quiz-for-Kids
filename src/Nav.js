@@ -11,10 +11,12 @@ const Nav = () => {
             <Link to='/flags'>
                 국기
             </Link>
+            <Link to= '/capital'>
+                수도
+            </Link>
             <Link to= '/four'>
                 사자성어
             </Link>
-
             </div>
         </div>
     )
