@@ -6,18 +6,22 @@
     align-items: center;
     margin-top: 5vh;
 }
+.flags_number{
+    font-size: 1.3em;
+}
 .flags_app img{
-    height: 50vh;
+    height: 40vh;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: 5vh 0;
+    margin: 3vh 0;
 }
 .flags_container{
     display: flex;
     gap: 5vw;
     flex: 1;
+    margin-top: 3vh;
 }
 .flags_container button:hover{
-    background-color: #57cca5;
+    background-color: #6aaaef;
     font-weight: 700;
 }
 .flags_container button{

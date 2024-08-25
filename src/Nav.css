@@ -6,11 +6,22 @@
     margin-top: 2.5vh;
 }
 .nav_links{
-
+    /* width: 60vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
 }
 .nav_links a{
     text-decoration: none;
-    color: #252525;
+    color: white;
+    white-space: nowrap;
     font-size: 1.5em;
     font-weight: 800;
+    background-color: rgb(255, 89, 119);
+    border-radius: 1em;
+    flex: 1;
+    padding: 0.2em 1em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
 }

@@ -1,0 +1,89 @@
+.four_app{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+.four_main{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.four_title{
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
+.four_question{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.four_example{
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.four_bottom{
+    margin-top: 5em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:2em;
+}
+.four_square{
+    border: 0.07em solid #252525;
+    border-radius: 0.2em;
+    text-align: center;
+    font-size: 3em;
+    width: 7em;
+    padding: 0.2em 0;
+}
+
+.four_hint{
+    background-color: #ffafd4;
+    font-size: 1.3em;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 1em;
+    width: fit-content;
+    padding: 0.2em 1.5em;
+    margin: auto;
+}
+.four_hint:hover{
+    font-weight: 700;
+}
+
+.four_showAnswer{
+    margin: auto;
+    padding: 0.2em 1em;
+    font-weight: 600;
+    border-radius: 1em;
+    width: fit-content;
+    color: white;
+    background-color: #252525;
+    cursor: pointer;
+}
+
+.four_answer{
+    font-size: 1.2em;
+}
+
+.four_correct{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    font-size: 2em;
+    color: #4BAE4F;
+    font-weight: 700;
+}
+.four_wrong{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    font-size: 2em;
+    color: #cb3c3c;
+    font-weight: 700;
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Flags.css';
 import Nav from './Nav';
+
 const Flags = () => {
   const countries = [
     "미국", "중국", "일본", "독일", "영국", "프랑스", "인도", "브라질", "러시아", 
@@ -27,7 +28,7 @@ const Flags = () => {
   };
 
   const getRandomElements = (array, number) => {
-    const shuffled = array.sort(() => Math.random() - 0.5);
+    const shuffled = [...array].sort(() => Math.random() - 0.5); // Spread operator를 사용해 원본 배열을 변경하지 않음
     return shuffled.slice(0, number);
   };
 
@@ -41,33 +42,37 @@ const Flags = () => {
   };
 
   const moveToNextQuestion = () => {
-    setCurrentCountryIndex(currentCountryIndex + 1);
+    if (currentCountryIndex < countries.length - 1) {
+      setCurrentCountryIndex(currentCountryIndex + 1);
+    } else {
+      alert('퀴즈를 모두 완료했습니다! 다시 시작합니다.');
+      setCurrentCountryIndex(0);
+    }
   };
-  
 
   return (
     <>
-    <Nav/>
-    <div className='flags_app'>
-    <h1>어떤 나라일까요?</h1>
-    {currentCountryIndex + 1} 번째 문제 (전체 {countries.length} 문제)
-      {currentCountryIndex < countries.length ? (
-        <>
-          <div>
-            <img src={`${correctAnswer}.svg`} alt={correctAnswer} />
-          </div>
-          <div className='flags_container'>
-            {answers.map(answer => (
-              <button key={answer} onClick={() => handleAnswerClick(answer)}>
-                {answer}
-              </button>
-            ))}
-          </div>
-        </>
-      ) : (
-        <p>퀴즈 종료!</p>
-      )}
-    </div>
+      <Nav />
+      <div className='flags_app'>
+        <h1>어떤 나라일까요?</h1>
+        <p className='flags_number'>{currentCountryIndex + 1} 번째 문제 (전체 {countries.length} 문제)</p>
+        {currentCountryIndex < countries.length ? (
+          <>
+            <div>
+            <img src={`/flags/${correctAnswer}.svg`} alt={correctAnswer} />
+            </div>
+            <div className='flags_container'>
+              {answers.map(answer => (
+                <button key={answer} onClick={() => handleAnswerClick(answer)}>
+                  {answer}
+                </button>
+              ))}
+            </div>
+          </>
+        ) : (
+          <p>퀴즈 종료!</p>
+        )}
+      </div>
     </>
   );
 };
